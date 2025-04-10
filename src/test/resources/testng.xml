@@ -7,4 +7,9 @@
             <class name="Task18_TestNG.CalculatorTest"/>
         </classes>
     </test>
+    <test verbose="2" preserve-order="true" name="Task19 AQA Tests">
+        <classes>
+            <class name="Task19_AQA.LogoSignUpTest"/>
+        </classes>
+    </test>
 </suite>
