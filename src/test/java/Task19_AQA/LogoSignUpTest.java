@@ -36,7 +36,7 @@ public class LogoSignUpTest {
     }
     @Test(priority = 2, description = "Verify the correct background color of the 'Sign up' button")
     public void testSignUpButtonBackgroundColor() {
-       // driver.get("https://guest:welcome2qauto@qauto.forstudy.space/");
+        driver.get("https://guest:welcome2qauto@qauto.forstudy.space/");
 
         try {
             WebElement signUpButton = driver.findElement(By.xpath("//button[contains(text(),'Sign up')]"));
