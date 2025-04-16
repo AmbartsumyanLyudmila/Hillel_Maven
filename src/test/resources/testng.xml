@@ -12,4 +12,9 @@
             <class name="Task19_AQA.LogoSignUpTest"/>
         </classes>
     </test>
+    <test verbose="2" preserve-order="true" name="Task20 JavaScriptExecutor">
+        <classes>
+            <class name="Task20_JavaScriptExecutor.JavaScriptExecutorTest"/>
+        </classes>
+    </test>
 </suite>
