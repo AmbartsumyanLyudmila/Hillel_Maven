@@ -22,7 +22,6 @@ public class Task21_Assert_Actions {
     public void setup() {
         driver = new ChromeDriver();
         driver.manage().window().maximize();
-
         driver.get("https://guest:welcome2qauto@qauto.forstudy.space/");
         actions = new Actions(driver);
     }
