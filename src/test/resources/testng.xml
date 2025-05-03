@@ -1,20 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 
-<suite name="All Test Suite">
-    <test verbose="2" preserve-order="true" name="Calculator Tests">
-        <classes>
-            <class name="Task18_TestNG.CalculatorTest"/>
-        </classes>
-    </test>
-    <test verbose="2" preserve-order="true" name="Task19 AQA Tests">
-        <classes>
-            <class name="Task19_AQA.LogoSignUpTest"/>
-        </classes>
-    </test>
-    <test verbose="2" preserve-order="true" name="Task20 JavaScriptExecutor">
-        <classes>
-            <class name="Task20_JavaScriptExecutor.JavaScriptExecutorTest"/>
-        </classes>
-    </test>
+<!--<suite name="All Test Suite">-->
+<!--    <test verbose="2" preserve-order="true" name="Calculator Tests">-->
+<!--        <classes>-->
+<!--            <class name="Task18_TestNG.CalculatorTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test verbose="2" preserve-order="true" name="Task19 AQA Tests">-->
+<!--        <classes>-->
+<!--            <class name="Task19_AQA.LogoSignUpTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--    <test verbose="2" preserve-order="true" name="Task20 JavaScriptExecutor">-->
+<!--        <classes>-->
+<!--            <class name="Task20_JavaScriptExecutor.JavaScriptExecutorTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--</suite>-->
+<suite name="BrowserTestSuite">
+<!-- Первый тест (Chrome) -->
+<test name="ChromeTest">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+        <class name="Task23_PageObject_WebDriverBrowserFactor.tests.AddCarTest"/>
+    </classes>
+</test>
+
+<!-- Второй тест (Firefox) -->
+<test name="FirefoxTest">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+        <class name="Task23_PageObject_WebDriverBrowserFactor.tests.AddCarTest"/>
+    </classes>
+</test>
 </suite>
