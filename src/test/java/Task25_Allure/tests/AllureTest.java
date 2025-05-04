@@ -18,7 +18,7 @@ import io.qameta.allure.*;
 
 @Epic("Garage Functionality")
 @Feature("Add Car Feature")
-public class AddCarTest extends BaseTest {
+public class AllureTest extends BaseTest {
 
     @Test(priority = 1)
     @Owner("AQA")

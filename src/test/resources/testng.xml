@@ -33,7 +33,7 @@
 <!--    </test>-->
     <test name="Garage Tests">
         <classes>
-            <class name="Task25_Allure.tests.AddCarTest"/>
+            <class name="Task25_Allure.tests.AllureTest"/>
         </classes>
     </test>
 </suite>
