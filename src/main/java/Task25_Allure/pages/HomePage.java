@@ -1,4 +1,4 @@
-package Task25_Allure.factory.pages;
+package Task25_Allure.pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;

@@ -1,9 +1,9 @@
 package Task25_Allure.tests;
 
 import Task25_Allure.base.BaseTest;
-import Task25_Allure.factory.factory.WebDriverFactory;
-import Task25_Allure.factory.pages.GaragePage;
-import Task25_Allure.factory.pages.HomePage;
+import Task25_Allure.factory.WebDriverFactory;
+import Task25_Allure.pages.GaragePage;
+import Task25_Allure.pages.HomePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
