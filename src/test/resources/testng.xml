@@ -19,6 +19,9 @@
 <!--    </test>-->
 <!--</suite>-->
 <suite name="All tests">
+    <listeners>
+        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
+    </listeners>
 <!--    <test name="ChromeTest">-->
 <!--        <parameter name="browser" value="chrome"/>-->
 <!--        <classes>-->

@@ -19,16 +19,16 @@ import io.qameta.allure.Step;
 import static io.qameta.allure.Allure.step;
 
 
-@Epic("Garage Functionality")
-@Feature("Add Car Feature")
+@Epic("Garage Page")
+@Feature("Add Car")
 public class AllureTest extends BaseTest {
 
     @Test(priority = 1, description = "Verify that Add Car is worked on Chrome browser")
     @Owner("AQA")
     @Severity(SeverityLevel.CRITICAL)
     @Description("Verify that Add Car is worked on Chrome browser")
-    @Link(name = "JIRA Task", url = "https://jira.example.com/browse/QA-125")
-    @Story("Add car and validate its display and data")
+    @Link(name = "TFS Task", url = "https://tfs.companyName.com/search/tfsTestTask")
+    @Story("Add car and validate data")
     public void testAddCarInChrome() {
         driver = WebDriverFactory.createDriver("chrome");
         driver.manage().window().maximize();
@@ -49,21 +49,21 @@ public class AllureTest extends BaseTest {
         softAssert.assertAll();
     }
 
-    @Step("Login as guest")
+    @Step("Login as Guest")
     private void loginAsGuest() throws InterruptedException {
-        step("Цей крок має з'явитися в звіті");
+        step("Step test");
         HomePage homePage = new HomePage(driver);
         homePage.clickGuestLogin();
     }
 
-    @Step("Додавання авто {brand} {model} з пробігом {miles}")
+    @Step("Add Car with brand, model, miles")
     private void addCar(String brand, String model, String miles) throws InterruptedException {
         GaragePage garagePage = new GaragePage(driver);
         garagePage.clickAddCarButton();
         garagePage.addCar(brand, model, miles);
     }
 
-    @Step("Перевірка, що назва авто 'Audi TT' відображається")
+    @Step("Verify that Audi TT is displayed")
     private void verifyCarNameDisplayed(SoftAssert softAssert) {
         try {
             WebElement addedCar = driver.findElement(By.xpath("//p[@class='car_name h2' and text()='Audi TT']"));
@@ -73,7 +73,7 @@ public class AllureTest extends BaseTest {
         }
     }
 
-    @Step("Перевірка, що у пробігу відображається поточна дата")
+    @Step("Verify that current date is displayed correctly")
     private void verifyCurrentDateInMileage(SoftAssert softAssert) {
         try {
             WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(10));
@@ -90,7 +90,7 @@ public class AllureTest extends BaseTest {
         }
     }
 
-    @Step("Перевірка, що поле пробігу містить значення 20")
+    @Step("Verify that mileage value = 20")
     private void verifyMileageValue(SoftAssert softAssert) {
         try {
             WebElement milesInput = driver.findElement(By.xpath("//input[@formcontrolname='miles']"));
@@ -101,7 +101,7 @@ public class AllureTest extends BaseTest {
         }
     }
 
-    @Step("Перевірка, що відображається логотип авто та URL закінчується на audi.png")
+    @Step("Verify that the car logo is shown and the URL has \"audi.png\" at the end")
     private void verifyCarLogo(SoftAssert softAssert) {
         try {
             WebElement carLogo = driver.findElement(By.xpath("//img[contains(@src,'audi.png')]"));
