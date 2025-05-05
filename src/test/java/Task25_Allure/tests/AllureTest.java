@@ -1,9 +1,9 @@
 package Task25_Allure.tests;
 
-import Task23_PageObject_WebDriverBrowserFactor.base.BaseTest;
-import Task23_PageObject_WebDriverBrowserFactor.factory.WebDriverFactory;
-import Task23_PageObject_WebDriverBrowserFactor.pages.GaragePage;
-import Task23_PageObject_WebDriverBrowserFactor.pages.StartPage;
+import Task25_Allure.base.BaseTest;
+import Task25_Allure.factory.factory.WebDriverFactory;
+import Task25_Allure.factory.pages.GaragePage;
+import Task25_Allure.factory.pages.HomePage;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -14,16 +14,19 @@ import java.time.Duration;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import io.qameta.allure.*;
+import io.qameta.allure.Step;
+
+import static io.qameta.allure.Allure.step;
 
 
 @Epic("Garage Functionality")
 @Feature("Add Car Feature")
 public class AllureTest extends BaseTest {
 
-    @Test(priority = 1)
+    @Test(priority = 1, description = "Verify that Add Car is worked on Chrome browser")
     @Owner("AQA")
     @Severity(SeverityLevel.CRITICAL)
-    @Description("Перевірка, що додавання авто працює в Chrome браузері")
+    @Description("Verify that Add Car is worked on Chrome browser")
     @Link(name = "JIRA Task", url = "https://jira.example.com/browse/QA-125")
     @Story("Add car and validate its display and data")
     public void testAddCarInChrome() {
@@ -46,9 +49,10 @@ public class AllureTest extends BaseTest {
         softAssert.assertAll();
     }
 
-    @Step("Авторизація як гість")
+    @Step("Login as guest")
     private void loginAsGuest() throws InterruptedException {
-        StartPage homePage = new StartPage(driver);
+        step("Цей крок має з'явитися в звіті");
+        HomePage homePage = new HomePage(driver);
         homePage.clickGuestLogin();
     }
 

@@ -4,12 +4,12 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
-public class StartPage {
+public class HomePage {
     private WebDriver driver;
 
     private By guestLoginButton =By.xpath("//button[text()='Guest log in']");
 
-    public StartPage(WebDriver driver) {
+    public HomePage(WebDriver driver) {
         this.driver = driver;
     }
 
