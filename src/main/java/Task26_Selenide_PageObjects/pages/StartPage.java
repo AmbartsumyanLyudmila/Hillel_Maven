@@ -1,22 +1,11 @@
 package Task26_Selenide_PageObjects.pages;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+import static com.codeborne.selenide.Selenide.$x;
 
 public class StartPage {
-    private WebDriver driver;
-
-    private By guestLoginButton =By.xpath("//button[text()='Guest log in']");
-
-    public StartPage(WebDriver driver) {
-        this.driver = driver;
-    }
 
     public void clickGuestLogin() {
-        WebElement button = driver.findElement(guestLoginButton);
-        button.click();
+        $x("//button[text()='Guest log in']").click();
     }
-
 
 }

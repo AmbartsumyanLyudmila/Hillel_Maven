@@ -1,23 +1,20 @@
 package Task26_Selenide_PageObjects.base;
 
-import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.interactions.Actions;
+import com.codeborne.selenide.Configuration;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 
+import static com.codeborne.selenide.Selenide.closeWebDriver;
+
 public class BaseTest {
-    protected WebDriver driver;
-    protected Actions actions;
-
-
     @BeforeMethod
     public void setup() {
+        Configuration.browser = "chrome";
+        Configuration.browserSize = "1920x1080";
     }
 
     @AfterMethod
     public void tearDown() {
-        if (driver != null) {
-            driver.quit();
-        }
+        closeWebDriver();
     }
 }
