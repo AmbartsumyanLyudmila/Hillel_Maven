@@ -18,10 +18,10 @@
 <!--        </classes>-->
 <!--    </test>-->
 <!--</suite>-->
-<suite name="All tests">
-    <listeners>
-        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>
-    </listeners>
+<!--<suite name="All tests">-->
+<!--    <listeners>-->
+<!--        <listener class-name="io.qameta.allure.testng.AllureTestNg"/>-->
+<!--    </listeners>-->
 <!--    <test name="ChromeTest">-->
 <!--        <parameter name="browser" value="chrome"/>-->
 <!--        <classes>-->
@@ -34,9 +34,24 @@
 <!--            <class name="Task23_PageObject_WebDriverBrowserFactor.tests.AddCarTest"/>-->
 <!--        </classes>-->
 <!--    </test>-->
-    <test name="Garage Tests">
-        <classes>
-            <class name="Task25_Allure.tests.AllureTest"/>
-        </classes>
-    </test>
+<!--    <test name="Garage Tests">-->
+<!--        <classes>-->
+<!--            <class name="Task25_Allure.tests.AllureTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+<!--</suite>-->
+<suite name="Selenoid Cross-Browser Suite" parallel="tests" thread-count="2">
+<test name="Chrome Test">
+    <parameter name="browser" value="chrome" />
+    <classes>
+        <class name="Task28_Docker.tests.LoginTest"/>
+    </classes>
+</test>
+
+<test name="Firefox Test">
+    <parameter name="browser" value="firefox" />
+    <classes>
+        <class name="Task28_Docker.tests.LoginTest"/>
+    </classes>
+</test>
 </suite>
