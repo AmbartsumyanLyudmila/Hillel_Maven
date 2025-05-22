@@ -15,13 +15,13 @@ public class BaseTest {
     public void setUp(@Optional("chrome") String browser) throws InterruptedException {
         driver = WebDriverFactory.createDriver(browser);
         driver.manage().window().maximize();
-        Thread.sleep(10000);
+        //Thread.sleep(10000);
     }
 
     @AfterMethod(alwaysRun = true)
     public void tearDown() throws InterruptedException {
         if (driver != null) {
-            Thread.sleep(10000);
+           // Thread.sleep(10000);
             driver.quit();
         }
     }

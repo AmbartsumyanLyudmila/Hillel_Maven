@@ -44,7 +44,7 @@ public class WebDriverFactory {
         }
 
         try {
-            driver = new RemoteWebDriver(new URL("http://192.168.0.220:4444/wd/hub"), capabilities);
+            driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capabilities);
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }

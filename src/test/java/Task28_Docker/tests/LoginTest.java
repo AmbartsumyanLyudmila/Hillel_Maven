@@ -16,7 +16,7 @@ public class LoginTest extends BaseTest {
         @Test(dataProvider = "authFailData", dataProviderClass = LoginDataProvider.class)
         public void authFailDataTest(String email, String password) throws InterruptedException {
             driver.get("https://guest:welcome2qauto@qauto.forstudy.space/");
-            Thread.sleep(5000);
+            //Thread.sleep(5000);
 
 
             WebElement signInButton = driver.findElement(By.xpath("//button[text()='Sign In']"));
