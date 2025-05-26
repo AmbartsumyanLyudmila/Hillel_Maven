@@ -4,7 +4,6 @@ import org.openqa.selenium.MutableCapabilities;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.firefox.FirefoxOptions;
-import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.remote.RemoteWebDriver;
 
 import java.net.MalformedURLException;
@@ -28,7 +27,7 @@ public class WebDriverFactory {
                 chromeOptions.addArguments("--remote-allow-origins=*");
                 //chromeOptions.addArguments("--disable-dev-shm-usage");
                 chromeOptions.addArguments("--disable-gpu");
-               // chromeOptions.addArguments("--headless=chrome");
+                // chromeOptions.addArguments("--headless=chrome");
                 chromeOptions.setCapability("selenoid:options", selenoidOptions);
                 chromeOptions.addArguments("--disable-dev-shm-usage");
                 chromeOptions.addArguments("--remote-allow-origins=*");
@@ -37,6 +36,9 @@ public class WebDriverFactory {
             case "firefox":
                 FirefoxOptions firefoxOptions = new FirefoxOptions();
                 firefoxOptions.setCapability("selenoid:options", selenoidOptions);
+                //firefoxOptions.setCapability("browserVersion", "117.0");
+                firefoxOptions.addArguments("--no-sandbox");
+                firefoxOptions.addArguments("--disable-dev-shm-usage");
                 capabilities = firefoxOptions;
                 break;
             default:
@@ -44,7 +46,7 @@ public class WebDriverFactory {
         }
 
         try {
-            driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub"), capabilities);
+            driver = new RemoteWebDriver(new URL("http://localhost:4444/wd/hub/"), capabilities);
         } catch (MalformedURLException e) {
             e.printStackTrace();
         }
@@ -52,3 +54,4 @@ public class WebDriverFactory {
         return driver;
     }
 }
+

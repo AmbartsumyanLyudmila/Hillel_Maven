@@ -10,18 +10,9 @@ import org.testng.annotations.Parameters;
 public class BaseTest {
     protected WebDriver driver;
 
-    @Parameters("browser")
-    @BeforeMethod(alwaysRun = true)
-    public void setUp(@Optional("chrome") String browser) throws InterruptedException {
-        driver = WebDriverFactory.createDriver(browser);
-        driver.manage().window().maximize();
-        //Thread.sleep(10000);
-    }
-
     @AfterMethod(alwaysRun = true)
-    public void tearDown() throws InterruptedException {
+    public void tearDown() {
         if (driver != null) {
-           // Thread.sleep(10000);
             driver.quit();
         }
     }
