@@ -1,4 +1,4 @@
-package Task29_Jenkins_Allure.base.base;
+package Task29_Jenkins_Allure.base;
 
 import Task29_Jenkins_Allure.factory.WebDriverFactory;
 import org.openqa.selenium.WebDriver;

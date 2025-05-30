@@ -1,7 +1,7 @@
-package Task29_Jenkins_Allure.base.tests;
+package Task29_Jenkins_Allure.tests;
 
 import Task29_Jenkins_Allure.Steps.GarageSteps;
-import Task29_Jenkins_Allure.base.base.BaseTest;
+import Task29_Jenkins_Allure.base.BaseTest;
 import io.qameta.allure.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
