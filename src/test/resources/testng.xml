@@ -55,20 +55,28 @@
 <!--    </classes>-->
 <!--</test>-->
 <!--</suite>-->
-<suite name="BrowserSuite" parallel="tests" thread-count="2">
+<!--<suite name="BrowserSuite" parallel="tests" thread-count="2">-->
 
-    <test name="ChromeTests">
-        <parameter name="browser" value="chrome"/>
+<!--    <test name="ChromeTests">-->
+<!--        <parameter name="browser" value="chrome"/>-->
+<!--        <classes>-->
+<!--            <class name="Task28_Docker.tests.LoginTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--    <test name="FirefoxTests">-->
+<!--        <parameter name="browser" value="firefox"/>-->
+<!--        <classes>-->
+<!--            <class name="Task28_Docker.tests.LoginTest"/>-->
+<!--        </classes>-->
+<!--    </test>-->
+
+<!--</suite>-->
+
+<suite name="MySuite">
+    <test name="AllureTests">
         <classes>
-            <class name="Task28_Docker.tests.LoginTest"/>
+            <class name="Task29_Jenkins_Allure.tests.AllureTestJenkins"/>
         </classes>
     </test>
-
-    <test name="FirefoxTests">
-        <parameter name="browser" value="firefox"/>
-        <classes>
-            <class name="Task28_Docker.tests.LoginTest"/>
-        </classes>
-    </test>
-
 </suite>
