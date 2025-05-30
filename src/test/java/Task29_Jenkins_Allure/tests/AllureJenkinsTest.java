@@ -14,7 +14,7 @@ import java.time.Duration;
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 
-public class AllureTestJenkins extends BaseTest {
+public class AllureJenkinsTest extends BaseTest {
 
     @Epic("Garage Page")
     @Feature("Add Car")

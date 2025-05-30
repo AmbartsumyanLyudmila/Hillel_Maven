@@ -76,7 +76,7 @@
 <suite name="MySuite">
     <test name="AllureTests">
         <classes>
-            <class name="Task29_Jenkins_Allure.tests.AllureTestJenkins"/>
+            <class name="Task29_Jenkins_Allure.tests.AllureJenkinsTest"/>
         </classes>
     </test>
 </suite>
